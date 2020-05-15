@@ -1,7 +1,7 @@
 export interface CMDBSystem {
-	type:CMDBType
-	addRecord(input : CMDBAddPayload) : number
-	deleteRecord(input : CMDBDeletePayload) : null
+	type: CMDBType
+	addRecord(input: CMDBAddPayload): number
+	deleteRecord(input: CMDBDeletePayload): null
 }
 
 export enum CMDBType {
@@ -11,10 +11,10 @@ export enum CMDBType {
 }
 
 export type CMDBAddPayload = {
-	recordName:string,
-	recordSize:string 
+	recordName: string,
+	recordSize: number
 }
 
 export type CMDBDeletePayload = {
-	recordId:string
+	recordId: number
 }
