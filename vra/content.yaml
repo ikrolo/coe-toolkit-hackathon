@@ -14,18 +14,6 @@
 #   - Custom Form 1
 #   - Custom Form 2
 
-blueprint:
-  - blueprint
-subscription:
-  - subscription
-flavor-mapping:
-  - small
-  - medium
-image-mapping: []
-storage-profile: []
-region-mapping:
-  cloud-account-tags:
-    export-tag: "env:dev"
-    import-tags: ["env:dev", "env:test"]
 workflow-custom-form:
-
+ - Add CMDB Record
+ - Delete CMDB Record

@@ -12,8 +12,8 @@
         <version>2.5.10</version>
     </parent>
 
-    <groupId>com.vmware.hackathon.cmdb</groupId>
-    <artifactId>mixed-all</artifactId>
+    <groupId>com.vmware.hackathon</groupId>
+    <artifactId>cmdb</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 

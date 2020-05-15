@@ -1,0 +1,39 @@
+{
+  "id": "9ebe33e6-91ef-403e-b4cb-202759a42ac4",
+  "name": "CMDB",
+  "description": null,
+  "typeId": "com.vmw.vro.workflow",
+  "createdAt": "2020-05-15T13:09:38.414Z",
+  "createdBy": "configadmin",
+  "lastUpdatedAt": "2020-05-15T13:09:38.653Z",
+  "lastUpdatedBy": "configadmin",
+  "config": {
+    "workflows": [
+      {
+        "id": "ac885cc5-4dec-371e-91e2-ab9c72d943af",
+        "name": "Add CMDB Record",
+        "version": "1.0.0",
+        "integration": {
+          "name": "embedded-VRO",
+          "endpointUri": "https://cava-6-240-014.eng.vmware.com:443",
+          "endpointConfigurationLink": "/resources/endpoints/a98de3b0-308d-46ee-863d-33342854ece2"
+        }
+      },
+      {
+        "id": "92d98560-3146-3a75-85bc-5a05d23ee109",
+        "name": "Delete CMDB Record",
+        "version": "1.0.0",
+        "integration": {
+          "name": "embedded-VRO",
+          "endpointUri": "https://cava-6-240-014.eng.vmware.com:443",
+          "endpointConfigurationLink": "/resources/endpoints/a98de3b0-308d-46ee-863d-33342854ece2"
+        }
+      }
+    ]
+  },
+  "itemsImported": 2,
+  "itemsFound": 2,
+  "lastImportStartedAt": "2020-05-15T13:09:38.422Z",
+  "lastImportCompletedAt": "2020-05-15T13:09:38.652Z",
+  "global": true
+}
