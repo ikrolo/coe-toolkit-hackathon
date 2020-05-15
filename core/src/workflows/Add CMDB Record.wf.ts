@@ -1,4 +1,5 @@
 import { Workflow } from "vrotsc-annotations";
+import { Logger } from "com.vmware.pscoe.library.ts.logging/Logger"
 
 @Workflow({
     name: "Add CMDB Record",
@@ -7,6 +8,7 @@ import { Workflow } from "vrotsc-annotations";
 
 export class AddCMDBRecord {
     public addRecord(CMDB: string, recordName: string, recordSize: number): void {
-        System.log("add record");
+        let logger = Logger.getLogger("Add CMDB Record");
+        logger.info("starting...");
     }
 }

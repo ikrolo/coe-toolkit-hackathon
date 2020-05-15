@@ -1,11 +1,11 @@
-import { CMDBSystem, CMDBType, CMDBAddPayload, CMDBDeletePayload } from "../types/CMDBTypes"; 
+import { CMDBSystem, CMDBType, CMDBAddPayload, CMDBDeletePayload } from "../../types/CMDBTypes"; 
 
 type KangarooCreateRecordPayload = {
 	name: string,
 	size: string
 }
 
-export default class KangarooSystem implements CMDBSystem {
+export default class KangarooService implements CMDBSystem {
 
 	type = CMDBType.Kangaroo;
 

@@ -1,4 +1,5 @@
 import { Workflow } from "vrotsc-annotations";
+import { Logger } from "com.vmware.pscoe.library.ts.logging/Logger"
 
 @Workflow({
     name: "Delete CMDB Record",
@@ -7,6 +8,7 @@ import { Workflow } from "vrotsc-annotations";
 
 export class DeleteCMDBRecord {
     public deleteCMDBRecord(CMDB: string, recordId: number): void {
-        System.log("Delete record");
+        let logger = Logger.getLogger("Delete CMDB Record");
+        logger.info("starting...");
     }
 }
