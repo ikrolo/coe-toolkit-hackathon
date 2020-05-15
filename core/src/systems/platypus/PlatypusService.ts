@@ -2,7 +2,7 @@ import { CMDBSystem, CMDBType, CMDBAddPayload, CMDBDeletePayload } from "../../t
 
 export default class PlatypusService implements CMDBSystem {
 
-	type = CMDBType.Platypus;
+	type = CMDBType.platypus;
 
 	addRecord(input: CMDBAddPayload): number {
 		throw new Error("Method not implemented.");

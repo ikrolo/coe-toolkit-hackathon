@@ -6,14 +6,15 @@ import PlatypusService from "../systems/platypus/PlatypusService";
 export class CMDBFactory {
 
 	public getService(cmdbTypeString : string) : CMDBSystem {
-		let cmdbType = CMDBType[cmdbTypeString];
+		let cmdbTypeLowercase = cmdbTypeString.toLowerCase();
+		let cmdbType = CMDBType[cmdbTypeLowercase];
 
 		switch (cmdbType) {
-			case CMDBType.Kangaroo:
+			case CMDBType.kangaroo:
 				return new KangarooService();	
-			case CMDBType.Wombat:
+			case CMDBType.wombat:
 				return new WombatService();	
-			case CMDBType.Platypus:
+			case CMDBType.platypus:
 				return new PlatypusService();	
 			default:
 				throw "Unable to find a matching CMDB Service for cmdbType";

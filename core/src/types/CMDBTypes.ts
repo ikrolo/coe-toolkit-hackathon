@@ -5,9 +5,9 @@ export interface CMDBSystem {
 }
 
 export enum CMDBType {
-	Kangaroo,
-	Wombat,
-	Platypus
+	kangaroo,
+	wombat,
+	platypus
 }
 
 export type CMDBAddPayload = {

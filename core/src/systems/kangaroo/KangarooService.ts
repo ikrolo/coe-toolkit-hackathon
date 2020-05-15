@@ -7,7 +7,7 @@ type KangarooCreateRecordPayload = {
 
 export default class KangarooService implements CMDBSystem {
 
-	type = CMDBType.Kangaroo;
+	type = CMDBType.kangaroo;
 
 	addRecord(input: CMDBAddPayload): number {
 		let addPayload = <KangarooCreateRecordPayload>{
