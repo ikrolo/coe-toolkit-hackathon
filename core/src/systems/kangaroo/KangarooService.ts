@@ -2,7 +2,7 @@ import { CMDBSystem, CMDBType, CMDBAddPayload, CMDBDeletePayload } from "../../t
 
 type KangarooCreateRecordPayload = {
 	name: string,
-	size: string
+	size: number
 }
 
 export default class KangarooService implements CMDBSystem {
