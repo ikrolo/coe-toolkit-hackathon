@@ -1,6 +1,6 @@
 import { CMDBSystem, CMDBType, CMDBAddPayload, CMDBDeletePayload } from "../../types/CMDBTypes"; 
 
-export default class PlatypusService implements CMDBSystem {
+export class PlatypusService implements CMDBSystem {
 
 	type = CMDBType.platypus;
 

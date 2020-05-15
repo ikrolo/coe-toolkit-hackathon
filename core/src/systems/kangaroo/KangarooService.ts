@@ -1,25 +1,47 @@
 import { CMDBSystem, CMDBType, CMDBAddPayload, CMDBDeletePayload } from "../../types/CMDBTypes"; 
+import { HttpClient, HttpRequest, HttpClientOptions } from "com.vmware.pscoe.library.ts.http/HttpClient";
 
-type KangarooCreateRecordPayload = {
+export type KangarooCreateRecordPayload = {
 	name: string,
 	size: number
 }
 
-export default class KangarooService implements CMDBSystem {
+export class KangarooService implements CMDBSystem {
 
 	type = CMDBType.kangaroo;
+	private client : HttpClient;
 
-	addRecord(input: CMDBAddPayload): number {
-		let addPayload = <KangarooCreateRecordPayload>{
-			name: input.recordName,
-			size: input.recordSize
-		};
+	constructor(restClient : HttpClient) {
+		this.client = restClient;
+	}
 
-		throw new Error("Method not implemented.");
+	addRecord(input: CMDBAddPayload): void {
+		this.validateInputs(input);
+
+		let request: HttpRequest = <HttpRequest> {
+			path: "/api/record",
+			content: <KangarooCreateRecordPayload>{
+				name: input.recordName,
+				size: input.recordSize
+			}
+		}
+
+		this.client.post(request);
 	}
 
 	deleteRecord(input: CMDBDeletePayload): null {
 		throw new Error("Method not implemented.");
 	}
 
+	private validateInputs (input: CMDBAddPayload) {
+		if (input.recordName == null) {
+			throw "CMDB Record Name is required";
+		}
+ 		if (input.recordSize == null) {
+			 throw "CMDB Record Size is required";
+		}
+ 		if (input.recordSize <= 0) {
+			 throw "CMDB Record Size must be greater than 0";
+		}
+	}
 }

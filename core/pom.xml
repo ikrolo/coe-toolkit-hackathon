@@ -32,6 +32,33 @@
     </dependency>
     <dependency>
       <groupId>com.vmware.pscoe.library.ts</groupId>
+      <artifactId>mock.rest</artifactId>
+      <type>package</type>
+      <version>2.0.1</version>
+      <scope>test</scope>
+    </dependency>
+        <dependency>
+      <groupId>com.vmware.pscoe.library.ts</groupId>
+      <artifactId>http</artifactId>
+      <version>2.0.0</version>
+      <type>package</type>
+    </dependency>
+    <dependency>
+      <groupId>com.vmware.pscoe.library.ts</groupId>
+      <artifactId>http</artifactId>
+      <version>2.0.0</version>
+      <type>tgz</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.vmware.pscoe.library.ts</groupId>
+      <artifactId>mock.rest</artifactId>
+      <type>tgz</type>
+      <version>2.0.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.vmware.pscoe.library.ts</groupId>
       <artifactId>logging</artifactId>
       <type>tgz</type>
       <version>2.0.1</version>

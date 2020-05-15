@@ -1,7 +1,9 @@
 import { CMDBSystem, CMDBType } from "../types/CMDBTypes";
-import KangarooService from "../systems/kangaroo/KangarooService";
-import WombatService from "../systems/wombat/WombatService";
-import PlatypusService from "../systems/platypus/PlatypusService";
+import { KangarooService } from "../systems/kangaroo/KangarooService";
+import { PlatypusService } from "../systems/platypus/PlatypusService";
+import { WombatService } from "../systems/wombat/WombatService";
+import { KangarooRestClient } from "../systems/kangaroo/KangarooRestClientt";
+import { RESTMock } from "com.vmware.pscoe.library.ts.mock.rest/RESTMock";
 
 export class CMDBFactory {
 
@@ -11,7 +13,8 @@ export class CMDBFactory {
 
 		switch (cmdbType) {
 			case CMDBType.kangaroo:
-				return new KangarooService();	
+				let restClient = new KangarooRestClient(RESTMock.createHost().build());
+				return new KangarooService(restClient);
 			case CMDBType.wombat:
 				return new WombatService();	
 			case CMDBType.platypus:

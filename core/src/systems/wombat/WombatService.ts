@@ -1,6 +1,6 @@
 import { CMDBSystem, CMDBType, CMDBAddPayload, CMDBDeletePayload } from "../../types/CMDBTypes"; 
 
-export default class WombatService implements CMDBSystem {
+export class WombatService implements CMDBSystem {
 
 	type = CMDBType.wombat;
 
