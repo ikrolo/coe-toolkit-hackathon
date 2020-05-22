@@ -18,15 +18,13 @@ export class KangarooService implements CMDBSystem {
 	addRecord(input: CMDBAddPayload): void {
 		this.validateInputs(input);
 
-		let request: HttpRequest = <HttpRequest> {
+		this.client.post(<HttpRequest> {
 			path: "/api/record",
 			content: <KangarooCreateRecordPayload>{
 				name: input.recordName,
 				size: input.recordSize
 			}
-		}
-
-		this.client.post(request);
+		});
 	}
 
 	deleteRecord(input: CMDBDeletePayload): null {
